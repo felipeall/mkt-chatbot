@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "de-study-case"
+version = "0.1.0"
+description = ""
+authors = ["Felipe Allegretti <felipeallh@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+langchain = "^0.0.240"
+openai = "^0.27.8"
+tiktoken = "^0.4.0"
+chromadb = "^0.4.2"
+pymongo = "^4.4.1"
+pandas = "^2.0.3"
+python-dotenv = "^1.0.0"
+scrapy = "^2.9.0"
+gradio = "^3.38.0"
+nested-lookup = "^0.2.25"
+loguru = "^0.7.0"
+boto3 = "^1.28.10"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.280"
+black = "^23.7.0"
+moto = "^4.1.13"
+pytest = "^7.4.0"
+pytest-mock = "^3.11.1"
+pytest-cov = "^4.1.0"
+
+[tool.black]
+line-length = 120
+verbose = true
+preview = true
+
+[tool.ruff]
+line-length = 120
+select = [
+    "COM",  # flake8-commas
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "RET",  # flake8-return
+    "Q",  # flake8-quotes
+    "W",  # pycodestyle warnings
+]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
